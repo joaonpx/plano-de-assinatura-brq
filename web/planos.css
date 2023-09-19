@@ -1,0 +1,19 @@
+body {
+  font-family: "Lato", sans-serif !important;
+}
+
+header {
+  padding-inline: 10% !important;
+  margin-top: 30px;
+}
+
+header .form-switch .form-check-input {
+  height: 50px;
+  width: 200px !important;
+}
+
+main .benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
