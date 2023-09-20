@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planos</title>
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light py-4 px-2 vh-100">
+    <div class="nav-bar container-fluid">
+      <a href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="31"
+          height="31"
+          viewBox="0 0 31 31"
+          fill="none"
+        >
+          <mask
+            id="mask0_220_1699"
+            style="mask-type: alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="31"
+            height="31"
+          >
+            <path
+              d="M30.4233 15.954C30.422 11.9757 28.8404 8.16091 26.0265 5.34877C23.2125 2.53663 19.3967 0.957506 15.4185 0.958788C11.4402 0.960071 7.62541 2.54165 4.81327 5.35561C2.00113 8.16956 0.422009 11.9854 0.423292 15.9636C0.424574 19.9419 2.00616 23.7567 4.82011 26.5688C7.63406 29.3809 11.4499 30.9601 15.4281 30.9588C19.4064 30.9575 23.2212 29.3759 26.0333 26.562C28.8454 23.748 30.4246 19.9322 30.4233 15.954ZM13.956 8.40067C14.5066 7.84971 15.3972 7.84942 15.9423 8.40003C16.4874 8.95063 16.4936 9.84125 15.943 10.3864L11.7842 14.5479L22.4541 14.5503C23.2334 14.55 23.8605 15.1768 23.8608 15.9561C23.861 16.7354 23.2343 17.3625 22.455 17.3628L11.7851 17.3662L15.9466 21.525C16.4975 22.0756 16.4978 22.9663 15.9472 23.5114C15.3966 24.0565 14.506 24.0626 13.9609 23.512L7.39627 16.9575C6.84531 16.4069 6.84502 15.5162 7.39563 14.9711L13.956 8.40067Z"
+              fill="black"
+            />
+          </mask>
+          <g mask="url(#mask0_220_1699)">
+            <rect
+              x="0.418457"
+              y="0.963623"
+              width="30"
+              height="30"
+              transform="rotate(-0.0184671 0.418457 0.963623)"
+              fill="white"
+            />
+          </g>
+        </svg>
+      </a>
+    </div>
+
+    <header class="container-fluid d-flex justify-content-between flex-wrap">
+      <div>
+        <h1>Escolha o melhor plano para você</h1>
+        <p class="text-secondary fs-5">Planos de assinatura</p>
+      </div>
+    </header>
+
+    <main class="container-fluid mt-5 px-5 h-75">
+      <div class="plans d-flex justify-content-center flex-wrap gap-5 h-100">
+        <div
+          class="card text-dark px-4 py-3"
+          style="width: 22rem; min-height: 80%"
+        >
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="card-info">
+              <p class="plan-type fw-normal fs-5">Bronze</p>
+              <h5 class="card-title fs-1 mb-4">
+                24 h<span class="text-secondary fs-6"> / 1 dia </span>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Perfeito para ocasiões especiais
+              </h6>
+
+              <ul class="benefits mt-4">
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Delivery
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Condutor adicional
+                  </label>
+                </li>
+
+                <li class="benefit d-flex align-items-center gap-3">
+                  <img src="./assets/plus.svg" alt="Plus Icon" />
+                  <span class="fst-italic">Adicionais</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn btn-dark p-2 fs-5 mt-3 w-100">
+              Escolher Plano
+            </button>
+          </div>
+        </div>
+        <div
+          class="card text-dark px-4 py-3"
+          style="width: 22rem; min-height: 80%"
+        >
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="card-info">
+              <p class="plan-type fw-normal fs-5">Prata</p>
+              <h5 class="card-title fs-1 mb-4">
+                72 h<span class="text-secondary fs-6"> / 3 dias </span>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Ideal para curtas viagens
+              </h6>
+
+              <ul class="benefits mt-4">
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Delivery
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Condutor adicional
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Programa de pontuação
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Notificações personalizadas
+                  </label>
+                </li>
+
+                <li class="benefit d-flex align-items-center gap-3">
+                  <img src="./assets/plus.svg" alt="Plus Icon" />
+                  <span class="fst-italic">Adicionais</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-dark p-2 fs-5 mt-3 w-100">
+              Escolher Plano
+            </button>
+          </div>
+        </div>
+        <div
+          class="card text-dark px-4 py-3"
+          style="width: 22rem; min-height: 80%"
+        >
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="card-info">
+              <p class="plan-type fw-normal fs-5">Ouro</p>
+              <h5 class="card-title fs-1 mb-4">
+                120 h<span class="text-secondary fs-6"> / 5 dias </span>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Experimente todos os beneficios
+              </h6>
+
+              <ul class="benefits mt-4">
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Delivery
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Condutor adicional
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Programa de pontuação
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Notificações personalizadas
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Troca de veículo flexivel
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    checked="checked"
+                    onclick="return false;"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Motorista particular
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3">
+                  <img src="./assets/plus.svg" alt="Plus Icon" />
+                  <span class="fst-italic">Adicionais</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-dark p-2 fs-5 mt-3 w-100">
+              Escolher Plano
+            </button>
+          </div>
+        </div>
+        <div
+          class="card border border-light text-bg-dark px-4 py-3"
+          style="width: 22rem; min-height: 80%"
+        >
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="card-info">
+              <p class="plan-type fs-5">Personalizado</p>
+              <h5 class="card-title fs-1 mb-4 text-muted">
+                <input
+                  type="number"
+                  class="hours-input"
+                  placeholder="00"
+                  aria-label="00"
+                  maxlength="99"
+                  pattern="\d*"
+                />
+                h<span class="text-secondary fs-6"> / dias </span>
+              </h5>
+              <h6 class="card-subtitle mb-2">
+                Personalize sua assinatura conforme sua necessidade
+              </h6>
+
+              <ul class="benefits-custom mt-4">
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Delivery
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Condutor adicional
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Programa de pontuação
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Notificações personalizadas
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Troca de veículo flexivel
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3 mb-2">
+                  <input
+                    class="form-check-input rounded-circle"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Motorista particular
+                  </label>
+                </li>
+                <li class="benefit d-flex align-items-center gap-3">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.6062 0.943589C4.1878 0.945013 0.607356 4.52777 0.60878 8.94617C0.610204 13.3646 4.19296 16.945 8.61136 16.9436C13.0298 16.9422 16.6102 13.3594 16.6088 8.94101C16.6074 4.52261 13.0246 0.942164 8.6062 0.943589ZM12.609 9.7423L9.40904 9.74333L9.41007 12.9433L7.81007 12.9438L7.80904 9.74385L4.60904 9.74488L4.60852 8.14488L7.80852 8.14385L7.80749 4.94385L9.40749 4.94333L9.40852 8.14333L12.6085 8.1423L12.609 9.7423Z"
+                      fill="#FFFFFF"
+                    />
+                  </svg>
+
+                  <span class="fst-italic">Adicionais</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-light p-2 fs-5 mt-4 w-100">
+              Escolher Plano
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
