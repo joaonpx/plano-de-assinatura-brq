@@ -60,128 +60,45 @@
       </a>
     </div>
 
-    <header class="container-fluid d-flex justify-content-between flex-wrap">
-      <div>
+    <header
+      class="container-fluid d-flex justify-content-between align-items-center flex-wrap"
+    >
+      <div class="me-4">
         <h1>Escolha o melhor plano para você</h1>
         <p class="text-secondary fs-5">Planos de assinatura</p>
+      </div>
+
+      <div class="check-inputs d-flex gap-3">
+        <div class="form-check">
+          <input
+            class="form-check-input hours"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked="true"
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Horas
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input monthly"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Mensal
+          </label>
+        </div>
       </div>
     </header>
 
     <main class="container-fluid mt-5 px-5 h-75">
-      <div class="plans d-flex justify-content-center flex-wrap gap-5 h-100">
-        <!-- <div
-          class="card border border-light text-bg-dark px-4 py-3"
-          style="width: 22rem; min-height: 80%"
-        >
-          <div class="card-body d-flex flex-column justify-content-between">
-            <div class="card-info">
-              <p class="plan-type fs-5">Personalizado</p>
-              <h5 class="card-title fs-1 mb-4 text-muted">
-                <input
-                  type="number"
-                  class="hours-input"
-                  placeholder="00"
-                  aria-label="00"
-                  maxlength="99"
-                  pattern="\d*"
-                />
-                h<span class="text-secondary fs-6"> / dias </span>
-              </h5>
-              <h6 class="card-subtitle mb-2">
-                Personalize sua assinatura conforme sua necessidade
-              </h6>
-
-              <ul class="benefits-custom mt-4">
-                <li class="benefit d-flex align-items-center gap-3 mb-2">
-                  <input
-                    class="form-check-input rounded-circle"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Delivery
-                  </label>
-                </li>
-                <li class="benefit d-flex align-items-center gap-3 mb-2">
-                  <input
-                    class="form-check-input rounded-circle"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Condutor adicional
-                  </label>
-                </li>
-                <li class="benefit d-flex align-items-center gap-3 mb-2">
-                  <input
-                    class="form-check-input rounded-circle"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Programa de pontuação
-                  </label>
-                </li>
-                <li class="benefit d-flex align-items-center gap-3 mb-2">
-                  <input
-                    class="form-check-input rounded-circle"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Notificações personalizadas
-                  </label>
-                </li>
-                <li class="benefit d-flex align-items-center gap-3 mb-2">
-                  <input
-                    class="form-check-input rounded-circle"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Troca de veículo flexivel
-                  </label>
-                </li>
-                <li class="benefit d-flex align-items-center gap-3 mb-2">
-                  <input
-                    class="form-check-input rounded-circle"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Motorista particular
-                  </label>
-                </li>
-                <li class="benefit d-flex align-items-center gap-3">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.6062 0.943589C4.1878 0.945013 0.607356 4.52777 0.60878 8.94617C0.610204 13.3646 4.19296 16.945 8.61136 16.9436C13.0298 16.9422 16.6102 13.3594 16.6088 8.94101C16.6074 4.52261 13.0246 0.942164 8.6062 0.943589ZM12.609 9.7423L9.40904 9.74333L9.41007 12.9433L7.81007 12.9438L7.80904 9.74385L4.60904 9.74488L4.60852 8.14488L7.80852 8.14385L7.80749 4.94385L9.40749 4.94333L9.40852 8.14333L12.6085 8.1423L12.609 9.7423Z"
-                      fill="#FFFFFF"
-                    />
-                  </svg>
-
-                  <span class="fst-italic">Adicionais</span>
-                </li>
-              </ul>
-            </div>
-            <button type="button" class="btn btn-light p-2 fs-5 mt-4 w-100">
-              Escolher Plano
-            </button>
-          </div>
-        </div> -->
-      </div>
+      <div
+        class="plans d-flex justify-content-center flex-wrap gap-5 h-100"
+      ></div>
     </main>
 
     <script
