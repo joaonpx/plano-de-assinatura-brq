@@ -1,0 +1,9 @@
+html, body {
+  font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e;
+}
+
+header {
+  padding-inline: 10% !important;
+  margin-top: 30px;
+}
