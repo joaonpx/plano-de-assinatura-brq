@@ -13,7 +13,8 @@ main .benefits {
   padding: 0;
 }
 
-main .card-info .hours-input {
+main .card-info .hours-input,
+main .card-info .months-input {
   width: 3.3rem;
   background: none;
   border: none;
@@ -21,22 +22,26 @@ main .card-info .hours-input {
   color: #6c757d;
 }
 
-main .card-info .hours-input:focus {
+main .card-info .hours-input:focus,
+main .card-info .months-input:focus {
   outline: 0;
 }
 
-main .card-info .hours-input::placeholder {
+main .card-info .hours-input::placeholder,
+main .card-info .months-input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #6c757d;
   opacity: 1; /* Firefox */
 }
 
-main .card-info .hours-input:-ms-input-placeholder {
+main .card-info .hours-input:-ms-input-placeholder,
+main .card-info .months-input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #6c757d;
 }
 
-main .card-info .hours-input::-ms-input-placeholder {
+main .card-info .hours-input::-ms-input-placeholder,
+main .card-info .months-input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #6c757d;
 }
@@ -79,4 +84,8 @@ input::-webkit-inner-spin-button {
 
 form {
   height: 28.5rem !important;
+}
+
+.card-title {
+  transition: all 200ms;
 }
