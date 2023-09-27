@@ -132,19 +132,62 @@ function updatePlans() {
   checkInputs.forEach((input) => {
     input.addEventListener("change", () => {
       if (input == hoursCheckbox) {
-        plans.hours.forEach((plan) => {
-          const planElement = createHoursPlanElement(
-            plan.type,
-            plan.date.days,
-            plan.description,
-            plan.benefits
-          )
+        let cards = document.querySelectorAll(".card")
 
-          document.querySelector(".plans").appendChild(planElement)
+        cards.forEach((plan) => {
+          let planType = plan.querySelector(".plan-type")
+
+          if (planType.innerText.toLowerCase() == "bronze") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = `
+            <h5 class="card-title fs-1 mb-4">24 h<span class="text-secondary fs-6"> / 1 dia </span></h5>
+            `
+          } else if (planType.innerText.toLowerCase() == "prata") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = `
+            <h5 class="card-title fs-1 mb-4">72 h<span class="text-secondary fs-6"> / 3 dias </span></h5>
+            `
+          } else if (planType.innerText.toLowerCase() == "ouro") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = `
+            <h5 class="card-title fs-1 mb-4">120 h<span class="text-secondary fs-6"> / 5 dias </span></h5>
+            `
+          } else if (planType.innerText.toLowerCase() == "personalizado") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = `
+            <h5 class="card-title fs-1 mb-4 text-muted"><input type="text" class="hours-input" placeholder="00" aria-label="00" pattern="d*" maxlength="99" wfd-id="id14"> h<span class="text-secondary fs-6"> / dias </span></h5>
+            `
+          }
         })
       } else if (input == monthlyCheckbox) {
-        plans.monthly.forEach((plan) => {
-          console.log("change to monthly")
+        let cards = document.querySelectorAll(".card")
+
+        cards.forEach((plan) => {
+          let planType = plan.querySelector(".plan-type")
+
+          if (planType.innerText.toLowerCase() == "bronze") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = "Mensal"
+          } else if (planType.innerText.toLowerCase() == "prata") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = "Trimestral"
+          } else if (planType.innerText.toLowerCase() == "ouro") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = "Semestral"
+          } else if (planType.innerText.toLowerCase() == "personalizado") {
+            const cardTitle = plan.querySelector(".card-title")
+
+            cardTitle.innerHTML = `
+            <h5 class="card-title fs-1 mb-4 text-muted"><input type="text" class="months-input" placeholder="00" aria-label="00" pattern="d*" maxlength="99" wfd-id="id14"><span class="text-secondary fs-6"> / meses </span></h5>
+            `
+          }
         })
       }
     })
