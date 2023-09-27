@@ -52,60 +52,6 @@ const plans = {
       ],
     },
   ],
-
-  monthly: [
-    {
-      type: "Bronze",
-      date: {
-        time: "Mensal",
-      },
-      description: "Perfeito para ocasiões especiais",
-      benefits: ["Delivery", "Condutor adicional"],
-    },
-    {
-      type: "Prata",
-      date: {
-        time: "Trimestral",
-      },
-      description: "Ideal para curtas viagens",
-      benefits: [
-        "Delivery",
-        "Condutor adicional",
-        "Programa de pontuação",
-        "Notificações personalizadas",
-      ],
-    },
-    {
-      type: "Ouro",
-      date: {
-        time: "Semestral",
-      },
-      description: "Ideal para curtas viagens",
-      benefits: [
-        "Delivery",
-        "Condutor adicional",
-        "Programa de pontuação",
-        "Notificações personalizadas",
-        "Troca de veículo flexivel",
-        "Motorista particular",
-      ],
-    },
-    {
-      type: "Personalizado",
-      date: {
-        time: 0,
-      },
-      description: "Personalize sua assinatura conforme sua necessidade:",
-      benefits: [
-        "Delivery",
-        "Condutor adicional",
-        "Programa de pontuação",
-        "Notificações personalizadas",
-        "Troca de veículo flexivel",
-        "Motorista particular",
-      ],
-    },
-  ],
 }
 
 function createBenefitElement(benefit, benefitIndex) {
