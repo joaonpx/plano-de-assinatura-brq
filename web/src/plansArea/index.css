@@ -85,7 +85,3 @@ input::-webkit-inner-spin-button {
 form {
   height: 28.5rem !important;
 }
-
-.card-title {
-  transition: all 200ms;
-}
