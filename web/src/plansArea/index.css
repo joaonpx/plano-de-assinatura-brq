@@ -1,5 +1,10 @@
 body {
   font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e !important;
+}
+
+.card:last-child {
+  background-color: #1c1c1e !important;
 }
 
 header {
