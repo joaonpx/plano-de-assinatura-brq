@@ -74,7 +74,7 @@ function createBenefitCustomElement(benefit, benefitIndex) {
   return itemElement
 }
 
-function createHoursPlanElement(name, days, subtitle, benefits) {
+function createPlanElement(name, days, subtitle, benefits) {
   if (name.toLowerCase() == "personalizado") {
     const itemElement = document.createElement("div")
     itemElement.className = "card border border-light text-bg-dark px-4 py-3"
@@ -131,7 +131,7 @@ function updatePlans() {
 
   if (hoursCheckbox.checked) {
     plans.hours.forEach((plan) => {
-      const planElement = createHoursPlanElement(
+      const planElement = createPlanElement(
         plan.type,
         plan.date.days,
         plan.description,
@@ -145,10 +145,10 @@ function updatePlans() {
   checkInputs.forEach((input) => {
     input.addEventListener("change", () => {
       if (input == hoursCheckbox) {
-        let cards = document.querySelectorAll(".card")
+        const cards = document.querySelectorAll(".card")
 
         cards.forEach((plan) => {
-          let planType = plan.querySelector(".plan-type")
+          const planType = plan.querySelector(".plan-type")
 
           if (planType.innerText.toLowerCase() == "bronze") {
             const cardTitle = plan.querySelector(".card-title")
@@ -177,10 +177,10 @@ function updatePlans() {
           }
         })
       } else if (input == monthlyCheckbox) {
-        let cards = document.querySelectorAll(".card")
+        const cards = document.querySelectorAll(".card")
 
         cards.forEach((plan) => {
-          let planType = plan.querySelector(".plan-type")
+          const planType = plan.querySelector(".plan-type")
 
           if (planType.innerText.toLowerCase() == "bronze") {
             const cardTitle = plan.querySelector(".card-title")
