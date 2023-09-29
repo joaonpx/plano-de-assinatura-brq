@@ -1,30 +1,30 @@
 const items = [
   {
-    img: "public/carFilters/todos.svg",
+    img: "../../public/carFilters/todos.svg",
     label: "Todos",
   },
   {
-    img: "public/carFilters/economico.svg",
+    img: "../../public/carFilters/economico.svg",
     label: "Economico",
   },
   {
-    img: "public/carFilters/intermediario.svg",
+    img: "../../public/carFilters/intermediario.svg",
     label: "Intermediário",
   },
   {
-    img: "public/carFilters/familia.svg",
+    img: "../../public/carFilters/familia.svg",
     label: "Familia",
   },
   {
-    img: "public/carFilters/suv.svg",
+    img: "../../public/carFilters/suv.svg",
     label: "Suv",
   },
   {
-    img: "public/carFilters/executivo.svg",
+    img: "../../public/carFilters/executivo.svg",
     label: "Executivo",
   },
   {
-    img: "public/carFilters/utilitario.svg",
+    img: "../../public/carFilters/utilitario.svg",
     label: "Utilitarios",
   },
 ];
