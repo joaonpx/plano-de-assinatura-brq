@@ -88,5 +88,10 @@ input::-webkit-inner-spin-button {
 }
 
 form {
-  height: 28.5rem !important;
+  height: 100% !important;
+}
+
+.card {
+  height: 42rem !important;
+  width: 22rem !important;
 }
