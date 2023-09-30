@@ -45,32 +45,41 @@ if (!containerDiv) {
 }
 
 const cars = [
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
-  { category: "basic", img: "ônix.svg", name: "ônix" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
 ];
 
-function CreateCarsCards (cars){
-  const category = "das"
+function CreateCarsCards(cars) {
+  const category = document.createElement("p");
+  const img = document.createElement("img");
+  const name = document.createElement("p");
+  const cost = document.createElement("p")
+
+  category.textContent = cars.category
+  img.src = `../../public/carsImages/${cars.img}`
+  name.textContent = cars.name
+  cost.textContent = cars.cost + "/hora"
+
 }
