@@ -1,0 +1,39 @@
+body {
+    font-family: "Lato", sans-serif !important;
+    }
+    
+    header {
+    padding-inline: 10% !important;
+    margin-top: 30px;
+    }
+
+.check-circle{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+}
+
+.confirmacao{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.check-circle{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+.fechar{
+    min-height: 31px;
+    max-width: 98%;
+
+}
