@@ -14,259 +14,222 @@
     crossorigin="anonymous"/>
   </head>
   <body class="text-light py-4 px-2 vw-75">
+    <div class="nav-bar container-fluid">
+      <a href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="31"
+          height="31"
+          viewBox="0 0 31 31"
+          fill="none"
+        >
+          <mask
+            id="mask0_220_1699"
+            style="mask-type: alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="31"
+            height="31"
+          >
+            <path
+              d="M30.4233 15.954C30.422 11.9757 28.8404 8.16091 26.0265 5.34877C23.2125 2.53663 19.3967 0.957506 15.4185 0.958788C11.4402 0.960071 7.62541 2.54165 4.81327 5.35561C2.00113 8.16956 0.422009 11.9854 0.423292 15.9636C0.424574 19.9419 2.00616 23.7567 4.82011 26.5688C7.63406 29.3809 11.4499 30.9601 15.4281 30.9588C19.4064 30.9575 23.2212 29.3759 26.0333 26.562C28.8454 23.748 30.4246 19.9322 30.4233 15.954ZM13.956 8.40067C14.5066 7.84971 15.3972 7.84942 15.9423 8.40003C16.4874 8.95063 16.4936 9.84125 15.943 10.3864L11.7842 14.5479L22.4541 14.5503C23.2334 14.55 23.8605 15.1768 23.8608 15.9561C23.861 16.7354 23.2343 17.3625 22.455 17.3628L11.7851 17.3662L15.9466 21.525C16.4975 22.0756 16.4978 22.9663 15.9472 23.5114C15.3966 24.0565 14.506 24.0626 13.9609 23.512L7.39627 16.9575C6.84531 16.4069 6.84502 15.5162 7.39563 14.9711L13.956 8.40067Z"
+              fill="black"
+            />
+          </mask>
+          <g mask="url(#mask0_220_1699)">
+            <rect
+              x="0.418457"
+              y="0.963623"
+              width="30"
+              height="30"
+              transform="rotate(-0.0184671 0.418457 0.963623)"
+              fill="white"
+            />
+          </g>
+        </svg>
+      </a>
+    </div>
     <header class="container-fluid d-flex justify-content-between flex-wrap">
-    <!--botao voltar-->
-    </header>
     <!--titulo e subtitulo-->
-    <section>
-      <div>
+      <div class="me-5">
         <h1>Faça seu cadastro</h1>
-        <p class="text-secondary fs-5">Preencha os campos abaixo</p>
+        <p class="text-secondary fs-5" style="font-size: 22px !important;">Preencha os campos abaixo</p>
       </div>
-    </section>
-    <!--barra de progresso-->
-    <container>
-      <section>
-        <div class="progress">
-          <div
-            class="progress-bar progress-bar-striped progress-bar-animated"
-            role="progressbar"
-            style="width: 75%; background-color: #808080;"
-            aria-valuenow="25"
-            aria-valuemin="0"
-            aria-valuemax="100">
-          </div>
-        </div>
-      </section>
-    <main class="container-fluid flex-wrap">
       <!--radio button-->
+      <div class="d-flex flex-column">
       <div class="form-check form-check-inline">
-        <input id="fisic-person" name="type-person" type="radio" class="form-check-input" checked required>
+        <input id="fisicPerson" name="type-person" type="radio" class="form-check-input" checked="true">
         <label class="form-check-label" style="font-size: 18px;" for="fisic-person">Pessoa física</label>
       </div>
       <div class="form-check form-check-inline mb-3">
-        <input id="juridic-person" name="type-person" type="radio" class="form-check-input" required>
+        <input id="juridicPerson" name="type-person" type="radio" class="form-check-input">
         <label class="form-check-label" style="font-size: 18px;" for="juridic-person">Pessoa jurídica</label>
       </div>
-      <form class="needs-validation" novalidate>
+    </div>
+    </header>
+    <main class="container-fluid flex-wrap">
+      <form class="needs-validation disabled" novalidate id="formPhysical">
         <div class="row justify-content-between">
-            <div class="col-md-4">
-                <div class="mb-5">
-                    <p class="position-absolute text-white fs-5 fw-normal col-6">
-                      Dados básicos
-                    </p>
-                  </div>
-                  <div class="mb-3">
-                    <label for="inputNome" class="form-label text-white fs-6 fw-normal col-12">Nome completo</label>
-                    <input type="text" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputNome" placeholder="Digite seu nome completo" required>
-                    <div class="invalid-feedback">
-                      Razão social obrigatória.
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="inputDataNascimento" class="form-label text-white fs-6 fw-normal col-12">Data de nascimento</label>
-                    <input type="date" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputDataNascimento" placeholder="Digite sua data de nascimento" required>
-                    <div class="invalid-feedback">
-                      Inscrição estadual obrigatória.
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="inputTelefone" class="form-label text-white fs-6 fw-normal col-6">Telefone</label>
-                    <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputTelefone" placeholder="Digite seu número de telefone" required>
-                    <div class="invalid-feedback">
-                      Número de CNPJ obrigatório.
-                    </div>
-                  </div>
-                  
+          <!--dados basicos-->
+          <div class="col-md-4">
+            <div class="mb-5">
+              <p class="topic position-absolute text-white fs-5 fw-normal col-6">
+                Dados básicos
+              </p>
             </div>
-            <div class="col-md-4">
-                <div class="mb-5">
-                    <p class="position-absolute text-white fs-5 fw-normal col-4">
-                      Endereço
-                    </p>
-                  </div>
-                  <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                    <label for="inputCep" class="form-label text-white fs-6 fw-normal col-6">CEP</label>
-                    <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputCep" placeholder="Digite seu CEP" required>
-                    <div class="invalid-feedback">
-                      Número de CEP obrigatório.
-                    </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                    <label for="inputRua" class="form-label text-white fs-6 fw-normal col-6">Rua</label>
-                    <input type="text" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputRua" placeholder="Digite a rua" required>
-                    <div class="invalid-feedback">
-                      Nome da rua obrigatória.
-                    </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="mb-3">
-                    <label for="inputNumeroRua" class="form-label text-white fs-6 fw-normal col-6">Número</label>
-                    <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputNumeroRua" placeholder="Digite o número" required>
-                    <div class="invalid-feedback">
-                      Número da rua obrigatório.
-                    </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                    <label for="inputComplemento" class="form-label text-white fs-6 fw-normal col-6">Complemento</label>
-                    <input type="text" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputComplemento" placeholder="(Opcional)">
-                  </div>
-                  </div>
-                  </div>
-                  <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                    <label for="selectEstado" class="form-label text-white fs-6 fw-normal col-6">Estado</label>
-                    <select class="form-select px-1 py-1 rounded-3 border border-3 border-white" id="selectEstado" required>
-                      <option value="">Selecione...</option>
-                      <option>São Paulo</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Selecione seu estado.
-                    </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                    <label for="selectCidade" class="form-label text-white fs-6 fw-normal col-6">Cidade</label>
-                    <select class="form-select px-1 py-1 rounded-3 border border-3 border-white" id="selectCidade" required>
-                      <option value="">Selecione...</option>
-                      <option>São Paulo</option>
-                    </select>
-                    <div class="invalid-feedback" style="position: absolute;">
-                      Selecione sua cidade.
-                    </div>
-                    </div>
-                    </div>
+            <div class="mb-3">
+              <label for="inputNome" class="form-label text-white fs-6 fw-normal col-12">Nome completo</label>
+              <input type="text" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputNome" placeholder="Digite seu nome completo" required>
+              <div class="invalid-feedback">
+                Nome completo obrigatório.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputDataNascimento" class="form-label text-white fs-6 fw-normal col-12">Data de nascimento</label>
+              <input type="date" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputDataNascimento" placeholder="Digite sua data de nascimento" required>
+              <div class="invalid-feedback">
+                Data de nascimento obrigatória.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputTelefone" class="form-label text-white fs-6 fw-normal col-6">Telefone</label>
+              <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputTelefone" placeholder="Digite seu número de telefone" required>
+              <div class="invalid-feedback">
+                Número de telefone obrigatório.
+              </div>
+            </div>    
+          </div>
+          <!--endereco-->
+          <div class="col-md-4">
+            <div class="mb-5">
+              <p class="topic position-absolute text-white fs-5 fw-normal col-4">
+                Endereço
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="inputCep" class="form-label text-white fs-6 fw-normal col-6">CEP</label>
+                  <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputCep" placeholder="Digite seu CEP" required>
+                  <div class="invalid-feedback">
+                    Número de CEP obrigatório.
                   </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="mb-5">
-                        <p class="position-absolute text-white fs-5 fw-normal col-6">
-                          Dados cadastrais
-                        </p>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="inputCnh" class="form-label text-white fs-6 fw-normal col-6">CNH</label>
-                          <input type="password" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputCnh" placeholder="Digite sua senha" required>
-                          <div class="invalid-feedback">
-                            Senha obrigatória.
-                          </div>
-                        </div>
-                    </div>
-                        <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="inputCpf" class="form-label text-white fs-6 fw-normal col-6">CPF</label>
-                          <input type="email" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputCpf" placeholder="Digite seu e-mail" required>
-                          <div class="invalid-feedback">
-                            E-mail obrigatório.
-                          </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="inputEmail" class="form-label text-white fs-6 fw-normal col-6">E-mail</label>
-                          <input type="email" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputEmail" placeholder="Digite seu e-mail" required>
-                          <div class="invalid-feedback">
-                            E-mail obrigatório.
-                          </div>
-                        </div>
-                        </div>
-                        <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="inputEmail" class="form-label text-white fs-6 fw-normal col-6">E-mail</label>
-                            <input type="email" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputEmail" placeholder="Digite seu e-mail" required>
-                            <div class="invalid-feedback">
-                              E-mail obrigatório.
-                            </div>
-                          </div>
-                          <div class="col-md-auto">
-                            <div class="mb-3">
-                          <!--botao-->
-                          <button type="submit" class="btn btn-primary btn-light p-2 fs-5 mt-3 w-100">
-                            Continuar
-                          </button>
-                            </div>
-                          </div>
-                        
-                    </div>
               </div>
-          </div>
-      </form>
-    </main>
-    <script src="index.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous">
-    </script>
-  </body>
-</html>
-<!--
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-    rel="stylesheet"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Pessoa Júridica</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-    crossorigin="anonymous"/>
-  </head>
-  <body class="text-light py-4 px-2 vw-75">
-    <header class="container-fluid d-flex justify-content-between flex-wrap">
-    
-    </header>
-    
-    <section>
-      <div>
-        <h1>Faça seu cadastro</h1>
-        <p class="text-secondary fs-5">Preencha os campos abaixo</p>
-      </div>
-    </section>
-    
-    <container>
-      <section>
-        <div class="progress">
-          <div
-            class="progress-bar progress-bar-striped progress-bar-animated"
-            role="progressbar"
-            style="width: 75%; background-color: #808080;"
-            aria-valuenow="25"
-            aria-valuemin="0"
-            aria-valuemax="100">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="inputRua" class="form-label text-white fs-6 fw-normal col-6">Rua</label>
+                  <input type="text" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputRua" placeholder="Digite a rua" required>
+                  <div class="invalid-feedback">
+                    Nome da rua obrigatória.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="inputNumeroRua" class="form-label text-white fs-6 fw-normal col-6">Número</label>
+                  <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputNumeroRua" placeholder="Digite o número" required>
+                  <div class="invalid-feedback">
+                    Número da rua obrigatório.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="inputComplemento" class="form-label text-white fs-6 fw-normal col-6">Complemento</label>
+                  <input type="text" class="form-control px-1 py-1 rounded-3 border border-3 border-white" id="inputComplemento" placeholder="(Opcional)">
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="selectEstado" class="form-label text-white fs-6 fw-normal col-6">Estado</label>
+                <select class="selectOption form-select px-1 py-1 rounded-3 border border-3 border-white" id="selectEstado" required>
+                  <option value="">Selecione...</option>
+                  <option class="abc">São Paulo</option>
+                </select>
+                <div class="invalid-feedback">
+                  Selecione seu estado.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="selectCidade" class="form-label text-white fs-6 fw-normal col-6">Cidade</label>
+                <select class="selectOption form-select px-1 py-1 rounded-3 border border-3 border-white" id="selectCidade" required>
+                  <option value="">Selecione...</option>
+                  <option>São Paulo</option>
+                </select>
+                <div class="invalid-feedback" style="position: absolute;">
+                  Selecione sua cidade.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    <main class="container-fluid flex-wrap">
-      
-      <div class="form-check form-check-inline">
-        <input id="fisic-person" name="type-person" type="radio" class="form-check-input" required>
-        <label class="form-check-label" style="font-size: 18px;" for="fisic-person">Pessoa física</label>
-      </div>
-      <div class="form-check form-check-inline mb-3">
-        <input id="juridic-person" name="type-person" type="radio" class="form-check-input" checked required>
-        <label class="form-check-label" style="font-size: 18px;" for="juridic-person">Pessoa jurídica</label>
-      </div>
-      <form class="needs-validation" novalidate>
+        <!--dados cadastrais-->
+        <div class="col-md-8">
+          <div class="mb-5">
+            <p class="topic position-absolute text-white fs-5 fw-normal col-6">
+              Dados cadastrais
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="inputCnh" class="form-label text-white fs-6 fw-normal col-6">CNH</label>
+                <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputCnh" placeholder="Digite sua CNH" required>
+                <div class="invalid-feedback">
+                  Número de CNH obrigatório.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="inputCpf" class="form-label text-white fs-6 fw-normal col-6">CPF</label>
+                <input type="number" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputCpf" placeholder="Digite seu CPF" required>
+                <div class="invalid-feedback">
+                  Número de CPF obrigatório.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label text-white fs-6 fw-normal col-6">E-mail</label>
+                <input type="email" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputEmail" placeholder="Digite seu e-mail" required>
+                <div class="invalid-feedback">
+                  E-mail obrigatório.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="inputSenha" class="form-label text-white fs-6 fw-normal col-6">Senha</label>
+                <input type="password" class="form-control px-1 py-1 rounded-3 border border-3 border-white col-xxl-2" id="inputSenha" placeholder="Digite sua senha" required>
+                <div class="invalid-feedback">
+                  Senha obrigatória.
+                </div>
+              </div>
+              <div class="col-md-auto">
+                <div class="mb-3">
+                  <!--botao-->
+                  <button type="submit" class="btn btn-primary btn-light p-2 fs-5 mt-3 w-100">
+                    Continuar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!--formulario juridica-->
+      <form class="needs-validation disabled" novalidate id="formJuridic">
         <div class="row justify-content-between">
             <div class="col-md-4">
                 <div class="mb-5">
@@ -434,7 +397,6 @@
                     </div>
               </div>
           </div>
-          
           <button type="submit" class="btn btn-primary btn-light p-2 fs-5 mt-3 w-100">
             Continuar
           </button>
@@ -448,4 +410,3 @@
     </script>
   </body>
 </html>
--->
