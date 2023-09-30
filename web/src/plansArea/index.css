@@ -1,21 +1,58 @@
+/* ------------ general ------------ */
 body {
   font-family: "Lato", sans-serif !important;
   background-color: #1c1c1e !important;
 }
 
-.card:last-child {
-  background-color: #1c1c1e !important;
+form {
+  height: 100% !important;
 }
 
+input[type="checkbox"] {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.form-check-input {
+  width: 19px !important;
+  height: 19px !important;
+
+  border: #ffff 2px solid !important;
+  background-color: #1c1c1e !important;
+  cursor: pointer !important;
+}
+
+.form-check-input:focus {
+  box-shadow: none !important;
+}
+
+/* ------------ header ------------ */
 header {
   padding-inline: 10% !important;
   margin-top: 30px;
 }
 
+/* ------------ main ------------ */
 main .benefits {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+main .card {
+  height: 42rem !important;
+  width: 22rem !important;
+}
+
+main .card:last-child {
+  background-color: #1c1c1e !important;
 }
 
 main .card-info .hours-input,
@@ -55,8 +92,8 @@ main .benefits .benefit .form-check-input {
   width: 19px !important;
   height: 19px !important;
 
-  border: #212529 2px solid !important;
-  background-color: #212529 !important;
+  border: #1c1c1e 2px solid !important;
+  background-color: #1c1c1e !important;
 }
 
 main .benefits .benefit .form-check-input:focus {
@@ -65,33 +102,4 @@ main .benefits .benefit .form-check-input:focus {
 
 main .benefits-custom {
   padding: 0 !important;
-}
-
-.form-check-input {
-  width: 19px !important;
-  height: 19px !important;
-
-  border: #ffff 2px solid !important;
-  background-color: #212529 !important;
-  cursor: pointer !important;
-}
-
-.form-check-input:focus {
-  box-shadow: none !important;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-form {
-  height: 100% !important;
-}
-
-.card {
-  height: 42rem !important;
-  width: 22rem !important;
 }
