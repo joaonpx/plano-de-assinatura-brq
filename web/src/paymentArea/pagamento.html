@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <a  href="https://icons8.com/icon/26191/à-esquerda-dentro-de-um-círculo"></a><a href="https://icons8.com"></a>
+    <link rel="stylesheet" href="style/estilo.css">
+
+    <!--links para fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <a href=""><img class="seta-voltar" src="https://img.icons8.com/ios-filled/50/circled-chevron-left.png" alt="circled-chevron-left"/></a>
+    <div id="pagina-completa">
+        <h1>Pagamento</h1>
+        <p class="sub-titulo-pagamento">Escolha a melhor forma de pagamento</p>
+
+        <!--Área de exibição do plano escolhido e adicionais-->
+        <div class="area-plano">
+            <div class="resumo-plano">
+
+                <p class="plano-prata">Plano Prata - 72 horas (3 dias)</p>
+                <div class="adicionais-carro">
+                    <div class="area-adicionais">
+                        <ul class="lista-adicionais">
+                            <li><img class ="check-adicionais"src="https://img.icons8.com/glyph-neue/20/FFFFFF/checked.png" alt="checked"/>  Delivery</li>
+                            <li><img class ="check-adicionais" src="https://img.icons8.com/glyph-neue/20/FFFFFF/checked.png" alt="checked"/>  Condutor adicional</li>
+                            <li><img class ="check-adicionais" src="https://img.icons8.com/glyph-neue/20/FFFFFF/checked.png" alt="checked"/>  Programa de pontuação</li>
+                            <li><img class ="check-adicionais" src="https://img.icons8.com/glyph-neue/20/FFFFFF/checked.png" alt="checked"/>  Notificações personalizadas</li>
+                            <li><img class ="check-adicionais" src="https://img.icons8.com/glyph-neue/20/FFFFFF/checked.png" alt="checked"/>  Wi-Fi no veículo</li>
+                        </ul>
+                    </div>
+
+                    <div class="carro-nome">
+                        <img class="imagem-carro"  src="img/Novo-Fiat-Uno-2018.jpg" alt="Imagem de um carro do modelo uno vermelho em movimento">
+                        <p>Fiat Uno 2018</p>
+                    </div>
+                </div>
+                <div class="total-alterar">
+                    <p>Valor total: R$1.960,00</p>
+                    <div class="botao-plano">
+                        <input class="botao-alterar-plano" type="button" value="Alterar plano">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Área de escolha da forma de pagamento-->
+        <div class="sessao-pagamento">
+            <p class="titulo-pagamentos">Formas de pagamento</p>
+            <div class="area-pagamento">
+                <div class="botoes-pagamento">
+                    <div class="posicao-botoes">
+                        <input type="button" value="Cartão de crédito" id="button1">
+                        <input type="button" value="PIX" id="button2">
+                        <input type="button" value="Boleto bancário" id="button3">
+                    </div>
+                </div>
+                <form class="dados-cartao hidden-div" id="div1"> 
+                    <div class="area-formulario">
+                        <div class="val">
+                            <label>Validade:<input type="text" class="validade" placeholder="MM/AA"></label>
+                        </div>
+                        <div class="cartao">
+                            <label>Número do cartão:<input type="text" class="nr-cartao" placeholder="Digite o número do cartão"></label>
+                        </div>
+                        <div class="cvc">
+                            <label>CVC:<input type="text" class="seguranca-cartao" placeholder="XXX"></label>
+                        </div>
+                        <div class="titular">
+                            <label>Nome do titular:<input type="text" class="nm-titular" placeholder="Digite o nome impresso no cartão"></label>
+                        </div>
+                        
+                        <div class="parc">
+                            <label>Quantidade de parcelas: 
+                                <select class="parcelas">
+                                    <option value="parcela1">1x de R$1.960 (à vista)</option>
+                                    <option value="parcela2">2x de R$980,00 (sem juros)</option>
+                                    <option value="parcela3">3x de R$653,33 (sem juros)</option>
+                                    <option value="parcela4">4x de R$512,05 (com juros)</option>
+                                    <option value="parcela5">5x de R$415,52 (com juros)</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="pag-pix hidden-div" id="div2">
+                    <p>O código PIX será enviado ao e-mail de cadastro. Após a confirmação do pagamento, poderá acompanhar o processo da sua assinatura normalmente.</p>
+                </div>
+                
+                <div class="pag-bol hidden-div" id="div3">
+                    <p>O Boleto bancário será enviado ao e-mail de cadastro. Após a confirmação do pagamento, poderá acompanhar o processo da sua assinatura normalmente.</p>
+                </div>
+                
+            </div>
+            <div class="botao-pagamento">
+            <input type="button" value="Finalizar compra" class="botao-concluir">
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
