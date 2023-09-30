@@ -45,41 +45,131 @@ if (!containerDiv) {
 }
 
 const cars = [
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
-  { category: "basic", img: "ônix.svg", name: "ônix", cost: "R$ ?" },
+  {
+    category: "Econômico",
+    img: "onix.webp",
+    name: "Ônix",
+    cost: "R$ 10,00",
+  },
+  {
+    category: "Econômico",
+    img: "gol.webp",
+    name: "Gol",
+    cost: "R$ 10,00",
+  },
+  {
+    category: "Executivo",
+    img: "audia8.webp",
+    name: "Audi A8",
+    cost: "R$ 120,00",
+  },
+  {
+    category: "Executivo",
+    img: "bmwlux.webp",
+    name: "BMW 530e",
+    cost: "102,00",
+  },
+  {
+    category: "Intermediário",
+    img: "civic.webp",
+    name: "Civic",
+    cost: "R$ 30,00",
+  },
+  {
+    category: "Utilitário",
+    img: "dodgeram.webp",
+    name: "Dodge Ram",
+    cost: "R$ 80,00",
+  },
+  {
+    category: "Econômico",
+    img: "fiatuno.webp",
+    name: "Fiat Uno",
+    cost: "R$ 5,00",
+  },
+  { category: "SUV", img: "havaal.webp", name: "Havaal H6", cost: "R$ 50,00" },
+  {
+    category: "SUV",
+    img: "mercedesjeep.webp",
+    name: "AM G63 ",
+    cost: "R$ 80,00",
+  },
+  {
+    category: "Intermediário",
+    img: "prisma.webp",
+    name: "Prisma",
+    cost: "R$ 20,00",
+  },
+  {
+    category: "Intermediário",
+    img: "prius.webp",
+    name: "Prius",
+    cost: "R$ 25,00",
+  },
+  { category: "SUV", img: "renegade.webp", name: "Renegade", cost: "R$ 35,00" },
+  {
+    category: "Excutivo",
+    img: "rollsroyce.webp",
+    name: "Rolls Royce",
+    cost: "R$ 1000,00",
+  },
+  { category: "SUV", img: "tiggo7.webp", name: "Tiggo 7", cost: "R$ 100,00" },
+  {
+    category: "Utilitário",
+    img: "mercedessprinter.webp",
+    name: "Mercedes Sprinter",
+    cost: "R$ 45,00",
+  },
 ];
 
-function CreateCarsCards(cars) {
+function createCategory(categoryText) {
   const category = document.createElement("p");
-  const img = document.createElement("img");
-  const name = document.createElement("p");
-  const cost = document.createElement("p")
-
-  category.textContent = cars.category
-  img.src = `../../public/carsImages/${cars.img}`
-  name.textContent = cars.name
-  cost.textContent = cars.cost + "/hora"
-
+  category.textContent = categoryText;
+  return category;
 }
+
+function createImage(imageSrc) {
+  const img = document.createElement("img");
+  img.src = `../../public/carsImages/${imageSrc}`;
+  return img;
+}
+
+function createName(nameText) {
+  const name = document.createElement("p");
+  name.textContent = nameText;
+  return name;
+}
+
+function createCost(costText) {
+  const cost = document.createElement("p");
+  cost.textContent = costText + "/hora";
+  return cost;
+}
+
+function CreateCarsCards(cars) {
+  // Crie os componentes independentes
+  const category = createCategory(cars.category);
+  const img = createImage(cars.img);
+  const name = createName(cars.name);
+  const cost = createCost(cars.cost);
+
+  // Retorne os componentes independentes
+  return { category, img, name, cost };
+}
+
+// Chame a função CreateCarsCards para cada carro em sua matriz cars para criar os componentes independentes
+const carComponents = cars.map((car) => CreateCarsCards(car));
+
+// Agora você pode decidir onde deseja anexar esses componentes no DOM
+// Por exemplo, você pode anexá-los a locais diferentes do HTML como este:
+const categoryContainer = document.getElementById("category-container");
+const imageContainer = document.getElementById("image-container");
+const nameContainer = document.getElementById("name-container");
+const costContainer = document.getElementById("cost-container");
+
+carComponents.forEach((car) => {
+  categoryContainer.appendChild(car.category);
+  imageContainer.appendChild(car.img);
+  nameContainer.appendChild(car.name);
+  costContainer.appendChild(car.cost);
+});
