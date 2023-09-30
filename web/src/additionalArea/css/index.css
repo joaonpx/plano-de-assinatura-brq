@@ -1,5 +1,6 @@
 body {
   font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e !important;
 }
 
 header {
@@ -25,15 +26,10 @@ header {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: rgba(33, 37, 41, 1);
+  background-color: #1c1c1e;
   border-radius: 50%;
   background-size: contain;
   transform: translate(-40%, -40%);
-}
-
-.container {
-  position: relative;
-  border: 20px solid rgba(33, 37, 41, 1);
 }
 
 .filtro {
@@ -50,13 +46,7 @@ header {
 }
 
 .todos-adicionais {
-  border: 20px solid rgba(33, 37, 41, 1);
-}
-
-.continuar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  border: 20px solid #1c1c1e;
 }
 
 .produtos {
@@ -74,7 +64,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 20px solid rgba(33, 37, 41, 1);
+  border: 20px solid #1c1c1e;
 }
 
 .produto {
@@ -174,4 +164,29 @@ header {
 .custom-checkbox:hover .bi-check {
   color: #fff;
   display: inline;
+}
+
+section {
+  padding-inline: 10% !important;
+  margin-top: 30px;
+}
+
+.center {
+  height: 7em;
+  text-align: center;
+}
+
+.continue-button {
+  padding: 12px 7%;
+  font-size: 18px;
+  background-color: white; /* Cor de fundo do botão */
+  color: black; /* Cor do texto do botão */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: gray; /* Cor de fundo do botão ao passar o mouse */
 }
