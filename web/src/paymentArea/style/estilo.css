@@ -32,6 +32,7 @@ body {
 
 .adicionais-carro {
     display: flex;
+    justify-content: space-between;
 }
 
 .plano-prata {
@@ -51,15 +52,14 @@ ul li img{
     vertical-align: bottom;
 }
 
-.carro-nome{
-    margin-left: 25%;
-}
-
 .imagem-carro {
     width: 250px;
     border-radius: 20px;
 }
 
+.carro-nome {
+    margin-right: 25px;
+}
 .carro-nome p {
     font-size: 20px;
 }
@@ -88,11 +88,16 @@ ul li img{
     padding-left: 8%;
 }
 
-
-/*****************************************************************/
 .area-pagamento{
     display: flex;
     justify-content: center;
+}
+
+.area-pagamento input, .area-pagamento select { 
+    background: #1c1c1e;
+    color: white;
+    border-radius: 7px;
+    border: 2px solid white !important; 
 }
 
 .titulo-pagamentos{
@@ -169,7 +174,7 @@ ul li img{
 }
 
 /*INTERAÇÕES DE BOTÕES*/
-input:hover{
+.posicao-botoes input:hover{
     background-color: white;
     color: black;
     cursor: pointer;
@@ -220,7 +225,7 @@ input:hover{
     .titulo {
         margin-left: 0;
     }
-    
+
     h1{
         text-align: center;
         margin-top: 10px;
