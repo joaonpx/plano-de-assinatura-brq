@@ -13,13 +13,13 @@ main .topic {
 }
 
 .disabled {
-    visibility: hidden !important;
+    display: none !important;
 }
 
 input {
     background-color: #1c1c1e !important;
     color: #ffffff !important;
-    font-size: 14px !important;
+    font-size: 18px !important;
 }
 
 input:focus {
