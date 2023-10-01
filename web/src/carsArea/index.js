@@ -67,7 +67,7 @@ const cars = [
     category: "Executivo",
     img: "bmwlux.webp",
     name: "BMW 530e",
-    cost: "102,00",
+    cost: "R$ 102,00",
   },
   {
     category: "Intermediário",
@@ -146,30 +146,49 @@ function createCost(costText) {
   return cost;
 }
 
-function CreateCarsCards(cars) {
-  // Crie os componentes independentes
-  const category = createCategory(cars.category);
-  const img = createImage(cars.img);
-  const name = createName(cars.name);
-  const cost = createCost(cars.cost);
+function CreateCarComponent(car) {
+  const componentContainer = document.createElement("div");
+  const categoryElement = createCategory(car.category);
+  const imageElement = createImage(car.img);
+  const nameElement = createName(car.name);
+  const costElement = createCost(car.cost);
 
-  // Retorne os componentes independentes
-  return { category, img, name, cost };
+  componentContainer.className = "car-component";
+
+  componentContainer.className = "p-6 border-2 border-white rounded";
+
+  categoryElement.className =
+    "content-center flex justify-center bg-white h-auto w-full h-full";
+
+  imageElement.className = "";
+
+  nameElement.className = "";
+
+  costElement.className = "";
+
+  componentContainer.appendChild(categoryElement);
+  componentContainer.appendChild(imageElement);
+  componentContainer.appendChild(nameElement);
+  componentContainer.appendChild(costElement);
+
+  const chooseButton = document.createElement("button");
+  chooseButton.textContent = "Escolher Veículo";
+  componentContainer.appendChild(chooseButton);
+
+  return componentContainer;
 }
 
-// Chame a função CreateCarsCards para cada carro em sua matriz cars para criar os componentes independentes
-const carComponents = cars.map((car) => CreateCarsCards(car));
+document.addEventListener("DOMContentLoaded", function () {
+  const carContainer = document.getElementById("car-container");
 
-// Agora você pode decidir onde deseja anexar esses componentes no DOM
-// Por exemplo, você pode anexá-los a locais diferentes do HTML como este:
-const categoryContainer = document.getElementById("category-container");
-const imageContainer = document.getElementById("image-container");
-const nameContainer = document.getElementById("name-container");
-const costContainer = document.getElementById("cost-container");
-
-carComponents.forEach((car) => {
-  categoryContainer.appendChild(car.category);
-  imageContainer.appendChild(car.img);
-  nameContainer.appendChild(car.name);
-  costContainer.appendChild(car.cost);
+  if (!carContainer) {
+    console.error(
+      'A div com id "car-container" não foi encontrada no documento.'
+    );
+  } else {
+    cars.forEach((car) => {
+      const carComponent = CreateCarComponent(car);
+      carContainer.appendChild(carComponent);
+    });
+  }
 });
