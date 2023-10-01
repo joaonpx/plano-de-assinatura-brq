@@ -121,7 +121,7 @@
                 type="text"
                 class="form-control rounded-3 border border-3 border-white col-xxl-2"
                 id="inputNome"
-                placeholder="Digite seu nome completo"
+                placeholder="Digite seu nome completo" maxlength="50"
                 required
               />
               <div class="invalid-feedback">Nome completo obrigatório.</div>
@@ -153,7 +153,7 @@
                 type="number"
                 class="form-control rounded-3 border border-3 border-white col-xxl-2"
                 id="inputTelefone"
-                placeholder="Digite seu número de telefone"
+                placeholder="Digite seu número de telefone" maxlength="11" 
                 required
               />
               <div class="invalid-feedback">
@@ -182,7 +182,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white"
                     id="inputCep"
-                    placeholder="Digite seu CEP"
+                    placeholder="Digite seu CEP" maxlength="8"
                     required
                   />
                   <div class="invalid-feedback">Número de CEP obrigatório.</div>
@@ -199,7 +199,7 @@
                     type="text"
                     class="form-control rounded-3 border border-3 border-white"
                     id="inputRua"
-                    placeholder="Digite a rua"
+                    placeholder="Digite a rua" maxlength="50"
                     required
                   />
                   <div class="invalid-feedback">Nome da rua obrigatória.</div>
@@ -218,7 +218,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white"
                     id="inputNumeroRua"
-                    placeholder="Digite o número"
+                    placeholder="Digite o número" maxlength="10"
                     required
                   />
                   <div class="invalid-feedback">Número da rua obrigatório.</div>
@@ -235,7 +235,7 @@
                     type="text"
                     class="form-control rounded-3 border border-3 border-white"
                     id="inputComplemento"
-                    placeholder="(Opcional)"
+                    placeholder="(Opcional)" maxlength="50"
                   />
                 </div>
               </div>
@@ -249,7 +249,7 @@
                     >Estado</label
                   >
                   <select
-                    class="selectOption form-select rounded-3 border border-3 border-white"
+                    class="select-option form-select rounded-3 border border-3 border-white"
                     id="selectEstado"
                     required
                   >
@@ -267,14 +267,14 @@
                     >Cidade</label
                   >
                   <select
-                    class="selectOption form-select rounded-3 border border-3 border-white"
+                    class="select-option form-select rounded-3 border border-3 border-white"
                     id="selectCidade"
                     required
                   >
                     <option value="">Selecione...</option>
                     <option>São Paulo</option>
                   </select>
-                  <div class="invalid-feedback" style="position: absolute">
+                  <div class="invalid-feedback mb-3">
                     Selecione sua cidade.
                   </div>
                 </div>
@@ -302,7 +302,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputCnh"
-                    placeholder="Digite sua CNH"
+                    placeholder="Digite sua CNH" maxlength="9"
                     required
                   />
                   <div class="invalid-feedback">Número de CNH obrigatório.</div>
@@ -319,7 +319,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputCpf"
-                    placeholder="Digite seu CPF"
+                    placeholder="Digite seu CPF" maxlength="11"
                     required
                   />
                   <div class="invalid-feedback">Número de CPF obrigatório.</div>
@@ -338,7 +338,7 @@
                     type="email"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputEmail"
-                    placeholder="Digite seu e-mail"
+                    placeholder="Digite seu e-mail" maxlength="50"
                     required
                   />
                   <div class="invalid-feedback">E-mail obrigatório.</div>
@@ -355,7 +355,7 @@
                     type="password"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputSenha"
-                    placeholder="Digite sua senha"
+                    placeholder="Digite sua senha" maxlength="12"
                     required
                   />
                   <div class="invalid-feedback">Senha obrigatória.</div>
@@ -400,7 +400,7 @@
                 type="text"
                 class="form-control rounded-3 border border-3 border-white col-xxl-2"
                 id="inputRazaoSocial"
-                placeholder="Digite a razão social"
+                placeholder="Digite a razão social" maxlength="50"
                 required
               />
               <div class="invalid-feedback">Razão social obrigatória.</div>
@@ -415,7 +415,7 @@
                 type="number"
                 class="form-control rounded-3 border border-3 border-white col-xxl-2"
                 id="inputInscricaoEstadual"
-                placeholder="Digite a inscrição estadual"
+                placeholder="Digite a inscrição estadual" maxlength="9"
                 required
               />
               <div class="invalid-feedback">
@@ -432,7 +432,7 @@
                 type="number"
                 class="form-control rounded-3 border border-3 border-white col-xxl-2"
                 id="inputCnpj"
-                placeholder="Digite o CNPJ"
+                placeholder="Digite o CNPJ" maxlength="14"
                 required
               />
               <div class="invalid-feedback">CNPJ obrigatório.</div>
@@ -447,7 +447,7 @@
                 type="number"
                 class="form-control rounded-3 border border-3 border-white col-xxl-2"
                 id="inputTelefoneComercial"
-                placeholder="Digite o telefone comercial"
+                placeholder="Digite o telefone comercial" maxlength="11"
                 required
               />
               <div class="invalid-feedback">
@@ -492,7 +492,7 @@
                   type="number"
                   class="form-control rounded-3 border border-3 border-white"
                   id="inputCepJuridica"
-                  placeholder="Digite seu CEP"
+                  placeholder="Digite seu CEP" maxlength="8"
                   required
                 />
                 <div class="invalid-feedback">Número de CEP obrigatório.</div>
@@ -509,7 +509,7 @@
                   type="text"
                   class="form-control rounded-3 border border-3 border-white"
                   id="inputRuaJuridica"
-                  placeholder="Digite a rua"
+                  placeholder="Digite a rua" maxlength="50"
                   required
                 />
                 <div class="invalid-feedback">Nome da rua obrigatória.</div>
@@ -526,7 +526,7 @@
                   type="number"
                   class="form-control rounded-3 border border-3 border-white"
                   id="inputNumeroRuaJuridica"
-                  placeholder="Digite o número"
+                  placeholder="Digite o número" maxlength="10"
                   required
                 />
                 <div class="invalid-feedback">Número da rua obrigatório.</div>
@@ -543,7 +543,7 @@
                   type="text"
                   class="form-control rounded-3 border border-3 border-white"
                   id="inputComplementoJuridica"
-                  placeholder="(Opcional)"
+                  placeholder="(Opcional)" maxlength="50"
                 />
               </div>
             </div>
@@ -556,7 +556,7 @@
                     >Estado</label
                   >
                   <select
-                    class="selectOption form-select rounded-3 border border-3 border-white"
+                    class="select-option form-select rounded-3 border border-3 border-white"
                     id="selectEstadoJuridica"
                     required
                   >
@@ -574,14 +574,14 @@
                     >Cidade</label
                   >
                   <select
-                    class="selectOption form-select rounded-3 border border-3 border-white"
+                    class="select-option form-select rounded-3 border border-3 border-white"
                     id="selectCidadeJuridica"
                     required
                   >
                     <option value="">Selecione...</option>
                     <option>São Paulo</option>
                   </select>
-                  <div class="invalid-feedback" style="position: absolute">
+                  <div class="invalid-feedback mb-3">
                     Selecione sua cidade.
                   </div>
                 </div>
@@ -609,7 +609,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputCnhJuridica"
-                    placeholder="Digite sua CNH"
+                    placeholder="Digite sua CNH" maxlength="10"
                     required
                   />
                   <div class="invalid-feedback">Número de CNH obrigatório.</div>
@@ -626,7 +626,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputCpfJuridica"
-                    placeholder="Digite seu CPF"
+                    placeholder="Digite seu CPF" maxlength="11"
                     required
                   />
                   <div class="invalid-feedback">Número de CPF obrigatório.</div>
@@ -645,7 +645,7 @@
                     type="text"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputNomeJuridica"
-                    placeholder="Digite seu nome completo"
+                    placeholder="Digite seu nome completo" maxlength="50"
                     required
                   />
                   <div class="invalid-feedback">Nome completo obrigatório.</div>
@@ -662,7 +662,7 @@
                     type="number"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputTelefoneJuridica"
-                    placeholder="Digite seu telefone"
+                    placeholder="Digite seu telefone" maxlength="11"
                     required
                   />
                   <div class="invalid-feedback">
@@ -683,7 +683,7 @@
                     type="email"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputEmailJuridica"
-                    placeholder="Digite seu e-mail"
+                    placeholder="Digite seu e-mail" maxlength="50"
                     required
                   />
                   <div class="invalid-feedback">E-mail obrigatório.</div>
@@ -700,7 +700,7 @@
                     type="password"
                     class="form-control rounded-3 border border-3 border-white col-xxl-2"
                     id="inputSenhaJuridica"
-                    placeholder="Digite sua senha"
+                    placeholder="Digite sua senha" maxlength="12"
                     required
                   />
                   <div class="invalid-feedback">Senha obrigatória.</div>
