@@ -17,13 +17,13 @@ function CreateImageLabelComponent(item) {
   labelElement.textContent = item.label;
 
   labelElement.className =
-    "content-center flex justify-center bg-white h-auto w-full h-full";
+    "content-center flex justify-center text-white h-auto w-full h-full";
 
   imageElement.className =
-    "content-center flex justify-center bg-black p-0 h-auto w-full";
+    "content-center flex justify-center p-0 h-auto w-full";
 
   componentContainer.className =
-    "content-center flex flex-col bg-yellow-200 w-full h-full";
+    "place-content-end flex flex-col w-full h-full";
 
   componentContainer.appendChild(imageElement);
   componentContainer.appendChild(labelElement);
@@ -181,6 +181,13 @@ function CreateCarComponent(car) {
   return componentContainer;
 }
 
+document.querySelectorAll("#category-dropdown .dropdown-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const selectedCategory = item.textContent;
+    filterCarsByCategory(selectedCategory);
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const carContainer = document.getElementById("car-container");
 
@@ -201,6 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function filterCarsByCategory(category) {
   const carComponents = document.querySelectorAll("#car-component");
 
+  
+
   carComponents.forEach((carComponent) => {
     const carCategory = carComponent.querySelector(".font-medium").textContent;
 
@@ -215,9 +224,7 @@ function filterCarsByCategory(category) {
 const searchForm = document.getElementById("search-form");
 
 if (!searchForm) {
-  console.error(
-    'O formulário com id "search-form" não foi encontrado no documento.'
-  );
+  console.error('O formulário com id "search-form" não foi encontrado no documento.');
 } else {
   const searchInput = document.getElementById("search-input");
 

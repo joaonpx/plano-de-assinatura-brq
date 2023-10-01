@@ -22,9 +22,15 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
   </head>
-  <body>
-    <header class="w-full bg-green-600 flex p-4">
+  <body style="background-color: #1C1C1E;">
+    <header class="w-full  flex p-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="31"
@@ -58,8 +64,8 @@
         </g>
       </svg>
     </header>
-    <section class="py-4 bg-blue-600 flex">
-      <div class="flex flex-col bg-red-200 container mx-auto text-start">
+    <section class="py-4 text-white  flex">
+      <div class="flex flex-col  container mx-auto text-start">
         <p class="text-xl font-bold">
           Escolha as categorias de sua preferência
         </p>
@@ -80,43 +86,47 @@
         </div>
       </div>
     </section> -->
-    <section class="py-4 bg-red-400">
+    <section class="py-4 ">
       <div class="container mx-auto flex justify-between">
         <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
+          <button 
+            class="btn btn-secondary bg-none text dropdown-toggle"
             type="button"
             id="dropdownMenuButton"
-            data-toggle="dropdown"
+            data-bs-toggle="dropdown" 
             aria-haspopup="true"
             aria-expanded="false"
           >
             Localização
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">BA</a>
+            <a class="dropdown-item" href="#">SP</a>
+            <a class="dropdown-item" href="#">RJ</a>
           </div>
         </div>
         <div class="lg:hidden">
-          <div class="dropdown">
+          <div class="dropdown" id="category-dropdown">
             <button
               class="btn btn-secondary dropdown-toggle"
               type="button"
               id="dropdownMenuButton"
-              data-toggle="dropdown"
+              data-bs-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Classificação
+              Categorias
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Todos</a>
+              <a class="dropdown-item" href="#">Econômico</a>
+              <a class="dropdown-item" href="#">Intermediário</a>
+              <a class="dropdown-item" href="#">Familia</a>
+              <a class="dropdown-item" href="#">SUV</a>
+              <a class="dropdown-item" href="#">Executivo</a>
+              <a class="dropdown-item" href="#">Utilitario</a>
             </div>
-          </div>
+          </div>          
         </div>
         <form id="search-form" class="form-inline hidden lg:flex">
           <input
@@ -127,27 +137,25 @@
             aria-label="Search"
           />
           <button class="btn" type="submit">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
               <path
                 d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                fill="#ffffff" 
               />
             </svg>
+            
           </button>
         </form>        
       </div>
     </section>
-    <section class="py-4 w-full bg-green-400">
-      <div class="container bg-blue-200 ">
-        <lu class="flex list-none  bg-red-800  justify-center">
-          <button id="component-container" class="w-auto content-center hidden lg:flex grid-cols-7 gap-16  bg-purple-500  rounded  shadow">
+    <section class="py-4 w-full ">
+      <div class="container  ">
+        <lu class="flex list-none    justify-center">
+          <button id="component-container" class="w-auto content-center hidden lg:flex grid-cols-7 gap-16 rounded  ">
           </button>
       </lu>
     </section>
-    <section class="py-4 w-full bg-red-800">
+    <section class="py-4 w-full ">
       <div class="container w-full ">
         <div class=" w-full">
           <div id="car-container" class="w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 p-2  "></div>
