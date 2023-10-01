@@ -19,7 +19,6 @@ main .select-option {
   color: #ffffff;
   cursor: pointer !important;
   font-size: 18px !important;
-
   padding: 10px 12px !important;
 }
 
@@ -72,7 +71,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   margin-right: 2px;
   opacity: 0.6;
-  margin-right: 30px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator:hover {
@@ -93,9 +91,12 @@ button {
     background-image: none !important;
 }
 
-
-.was-validated .form-control,.select-option:invalid {
+.was-validated .form-control:invalid {
     background-image: none !important;
+}
+
+.was-validated .select-option:invalid {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px !important;
 }
 
 input::-webkit-outer-spin-button,
