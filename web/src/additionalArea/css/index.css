@@ -64,7 +64,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 20px solid #1c1c1e;
+  margin-top: 18px;
 }
 
 .produto {
@@ -171,22 +171,12 @@ section {
   margin-top: 30px;
 }
 
-.center {
-  height: 7em;
-  text-align: center;
+button{
+  width: 237px;
 }
 
-.continue-button {
-  padding: 12px 7%;
-  font-size: 18px;
-  background-color: white; /* Cor de fundo do botão */
-  color: black; /* Cor do texto do botão */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.continue-button:hover {
-  background-color: gray; /* Cor de fundo do botão ao passar o mouse */
+@media (max-width: 768px) {
+  button {
+    width: 50%;
+  }
 }
