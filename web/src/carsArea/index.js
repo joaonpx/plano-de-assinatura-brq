@@ -49,78 +49,79 @@ const cars = [
     category: "Econômico",
     img: "onix.webp",
     name: "Ônix",
-    cost: "R$ 10,00",
+    cost: "R$10",
   },
   {
     category: "Econômico",
     img: "gol.webp",
     name: "Gol",
-    cost: "R$ 10,00",
+    cost: "R$10",
   },
   {
     category: "Executivo",
     img: "audia8.webp",
     name: "Audi A8",
-    cost: "R$ 120,00",
+    cost: "R$120",
   },
   {
     category: "Executivo",
     img: "bmwlux.webp",
     name: "BMW 530e",
-    cost: "R$ 102,00",
+    cost: "R$102",
   },
   {
     category: "Intermediário",
     img: "civic.webp",
     name: "Civic",
-    cost: "R$ 30,00",
+    cost: "R$30",
   },
   {
     category: "Utilitário",
     img: "dodgeram.webp",
     name: "Dodge Ram",
-    cost: "R$ 80,00",
+    cost: "R$80",
   },
   {
     category: "Econômico",
     img: "fiatuno.webp",
     name: "Fiat Uno",
-    cost: "R$ 5,00",
+    cost: "R$5",
   },
-  { category: "SUV", img: "havaal.webp", name: "Havaal H6", cost: "R$ 50,00" },
+  { category: "SUV", img: "havaal.webp", name: "Havaal H6", cost: "R$50" },
   {
     category: "SUV",
     img: "mercedesjeep.webp",
     name: "AM G63 ",
-    cost: "R$ 80,00",
+    cost: "R$80",
   },
   {
     category: "Intermediário",
     img: "prisma.webp",
     name: "Prisma",
-    cost: "R$ 20,00",
+    cost: "R$20",
   },
   {
     category: "Intermediário",
     img: "prius.webp",
     name: "Prius",
-    cost: "R$ 25,00",
+    cost: "R$25",
   },
-  { category: "SUV", img: "renegade.webp", name: "Renegade", cost: "R$ 35,00" },
+  { category: "SUV", img: "renegade.webp", name: "Renegade", cost: "R$35" },
   {
     category: "Excutivo",
     img: "rollsroyce.webp",
     name: "Rolls Royce",
-    cost: "R$ 1000,00",
+    cost: "R$1000",
   },
-  { category: "SUV", img: "tiggo7.webp", name: "Tiggo 7", cost: "R$ 100,00" },
+  { category: "SUV", img: "tiggo7.webp", name: "Tiggo 7", cost: "R$100" },
   {
     category: "Utilitário",
     img: "mercedessprinter.webp",
     name: "Mercedes Sprinter",
-    cost: "R$ 45,00",
+    cost: "R$45",
   },
 ];
+
 
 function createCategory(categoryText) {
   const category = document.createElement("p");
@@ -142,7 +143,7 @@ function createName(nameText) {
 
 function createCost(costText) {
   const cost = document.createElement("p");
-  cost.textContent = costText + "/hora";
+  cost.textContent = "total equivalente à: " + costText + "/hora";
   return cost;
 }
 
@@ -153,18 +154,17 @@ function CreateCarComponent(car) {
   const nameElement = createName(car.name);
   const costElement = createCost(car.cost);
 
-  componentContainer.className = "car-component";
+  componentContainer.id = "car-component";
 
   componentContainer.className = "p-6 border-2 border-white rounded";
 
-  categoryElement.className =
-    "content-center flex justify-center bg-white h-auto w-full h-full";
+  categoryElement.className = " font-medium text-white";
 
-  imageElement.className = "";
+  imageElement.className = "rounded-lg h-50 w-100";
 
-  nameElement.className = "";
+  nameElement.className = "font-medium text-white";
 
-  costElement.className = "";
+  costElement.className = "text-white bg-black";
 
   componentContainer.appendChild(categoryElement);
   componentContainer.appendChild(imageElement);
@@ -173,7 +173,11 @@ function CreateCarComponent(car) {
 
   const chooseButton = document.createElement("button");
   chooseButton.textContent = "Escolher Veículo";
+  chooseButton.className = "text-black p-2 flex w-full justify-center bg-white py-8 rounded";
   componentContainer.appendChild(chooseButton);
+
+  
+
 
   return componentContainer;
 }
