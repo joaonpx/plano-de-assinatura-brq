@@ -136,7 +136,7 @@ header {
   }
 }
 
-/* CSS puro para definir o número de colunas em uma grade em larguras de tela maiores que 1024px (lg) */
+
 @media (min-width: 1024px) {
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -146,3 +146,5 @@ header {
 .justify-between {
   justify-content: space-between;
 }
+
+
