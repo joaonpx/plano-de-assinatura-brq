@@ -1,3 +1,4 @@
+
 const items = [
   { img: "todos.svg", label: "Todos" },
   { img: "economico.svg", label: "Econômico" },
@@ -163,9 +164,9 @@ function CreateCarComponent(car) {
 
   imageElement.className = "rounded-lg h-50 w-100";
 
-  nameElement.className = "font-bold text-white ";
+  nameElement.className = "font-bold text-xl text-white ";
 
-  costElement.className = "text-white bg-black flex justify-center";
+  costElement.className = "text-white text-xl flex justify-center";
 
   componentContainer.appendChild(categoryElement);
   componentContainer.appendChild(imageElement);
