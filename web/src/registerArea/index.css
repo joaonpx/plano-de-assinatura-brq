@@ -14,7 +14,7 @@ main .topic {
   font-size: 22px !important;
 }
 
-main .selectOption {
+main .select-option {
   background-color: #1c1c1e !important;
   color: #ffffff;
   cursor: pointer !important;
@@ -23,7 +23,7 @@ main .selectOption {
   padding: 10px 12px !important;
 }
 
-main .selectOption:focus {
+main .select-option:focus {
   box-shadow: none !important;
 }
 
@@ -87,6 +87,15 @@ button {
   button {
     width: 50%;
   }
+}
+
+.was-validated .form-control,.select-option:valid {
+    background-image: none !important;
+}
+
+
+.was-validated .form-control,.select-option:invalid {
+    background-image: none !important;
 }
 
 input::-webkit-outer-spin-button,
