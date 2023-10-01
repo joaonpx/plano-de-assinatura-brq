@@ -1,81 +1,97 @@
 body {
-    font-family: "Lato", sans-serif !important;
-    background-color: #1c1c1e !important;
+  font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e !important;
 }
 
-header, main, section {
-    padding-inline: 10% !important;
-    margin-top: 30px;
+header,
+main,
+section {
+  padding-inline: 10% !important;
+  margin-top: 30px;
 }
 
 main .topic {
-    font-size: 22px !important;
+  font-size: 22px !important;
 }
 
 main .selectOption {
-    background-color: #1c1c1e !important;
-    color: #ffffff;
-    cursor: pointer !important;
-    font-size: 16px !important;
+  background-color: #1c1c1e !important;
+  color: #ffffff;
+  cursor: pointer !important;
+  font-size: 18px !important;
+
+  padding: 10px 12px !important;
+}
+
+main .selectOption:focus {
+  box-shadow: none !important;
 }
 
 .disabled {
-    display: none !important;
+  display: none !important;
 }
 
 input {
-    background-color: #1c1c1e !important;
-    color: #ffffff !important;
-    font-size: 18px !important;
+  background-color: #1c1c1e !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
 }
 
 input:focus {
-    box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.form-control {
+  padding: 10px 12px !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
 }
 
 input[type="radio"] {
-    cursor: pointer;
-    border: 2px solid #ffffff;
+  cursor: pointer;
+  border: 2px solid #ffffff;
 }
 
 input[type="radio"]:checked {
-    border-color: #ffffff !important;
+  border-color: #ffffff !important;
 }
 
 input[type="radio"]:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 input[type="date"] {
-    color: #ffffff80 !important;
-    color-scheme: dark;
+  color: #ffffff80 !important;
+  color-scheme: dark;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 2px;
-    opacity: 0.6;
-    margin-right: 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  margin-right: 30px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator:hover {
-    opacity: 1
+  opacity: 1;
 }
 
-button{
-    width: 237px;
+button {
+  width: 237px;
 }
 
 @media (max-width: 768px) {
-    button {
+  button {
     width: 50%;
-    }
+  }
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
--webkit-appearance: none;
-margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
