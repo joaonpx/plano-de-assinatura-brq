@@ -1,11 +1,11 @@
 const items = [
   { img: "todos.svg", label: "Todos" },
-  { img: "economico.svg", label: "Economico" },
+  { img: "economico.svg", label: "Econômico" },
   { img: "inter.svg", label: "Intermediário" },
   { img: "familia.svg", label: "Familia" },
-  { img: "suv.svg", label: "Suv" },
+  { img: "suv.svg", label: "SUV" },
   { img: "executivo.svg", label: "Executivo" },
-  { img: "utilitario.svg", label: "Utilitarios" },
+  { img: "utilitario.svg", label: "Utilitario" },
 ];
 
 function CreateImageLabelComponent(item) {
@@ -40,6 +40,8 @@ if (!containerDiv) {
 } else {
   items.forEach((item) => {
     const component = CreateImageLabelComponent(item);
+    component.setAttribute("data-category", item.label);
+    component.addEventListener("click", () => filterCarsByCategory(item.label));
     containerDiv.appendChild(component);
   });
 }
@@ -76,7 +78,7 @@ const cars = [
     cost: "R$30",
   },
   {
-    category: "Utilitário",
+    category: "Utilitario",
     img: "dodgeram.webp",
     name: "Dodge Ram",
     cost: "R$80",
@@ -89,9 +91,9 @@ const cars = [
   },
   { category: "SUV", img: "havaal.webp", name: "Havaal H6", cost: "R$50" },
   {
-    category: "SUV",
+    category: "Familia",
     img: "mercedesjeep.webp",
-    name: "AM G63 ",
+    name: "AMG G63 ",
     cost: "R$80",
   },
   {
@@ -106,22 +108,21 @@ const cars = [
     name: "Prius",
     cost: "R$25",
   },
-  { category: "SUV", img: "renegade.webp", name: "Renegade", cost: "R$35" },
+  { category: "Familia", img: "renegade.webp", name: "Renegade", cost: "R$35" },
   {
-    category: "Excutivo",
+    category: "Executivo",
     img: "rollsroyce.webp",
     name: "Rolls Royce",
     cost: "R$1000",
   },
   { category: "SUV", img: "tiggo7.webp", name: "Tiggo 7", cost: "R$100" },
   {
-    category: "Utilitário",
+    category: "Utilitario",
     img: "mercedessprinter.webp",
     name: "Mercedes Sprinter",
     cost: "R$45",
   },
 ];
-
 
 function createCategory(categoryText) {
   const category = document.createElement("p");
@@ -162,9 +163,9 @@ function CreateCarComponent(car) {
 
   imageElement.className = "rounded-lg h-50 w-100";
 
-  nameElement.className = "font-medium text-white";
+  nameElement.className = "font-bold text-white ";
 
-  costElement.className = "text-white bg-black";
+  costElement.className = "text-white bg-black flex justify-center";
 
   componentContainer.appendChild(categoryElement);
   componentContainer.appendChild(imageElement);
@@ -173,11 +174,9 @@ function CreateCarComponent(car) {
 
   const chooseButton = document.createElement("button");
   chooseButton.textContent = "Escolher Veículo";
-  chooseButton.className = "text-black p-2 flex w-full justify-center bg-white py-8 rounded";
+  chooseButton.className =
+    "text-black p-2 flex w-full justify-center bg-white py-8 rounded";
   componentContainer.appendChild(chooseButton);
-
-  
-
 
   return componentContainer;
 }
@@ -195,4 +194,54 @@ document.addEventListener("DOMContentLoaded", function () {
       carContainer.appendChild(carComponent);
     });
   }
+
+  filterCarsByCategory("Todos");
 });
+
+function filterCarsByCategory(category) {
+  const carComponents = document.querySelectorAll("#car-component");
+
+  carComponents.forEach((carComponent) => {
+    const carCategory = carComponent.querySelector(".font-medium").textContent;
+
+    if (category === "Todos" || carCategory === category) {
+      carComponent.style.display = "block";
+    } else {
+      carComponent.style.display = "none";
+    }
+  });
+}
+
+const searchForm = document.getElementById("search-form");
+
+if (!searchForm) {
+  console.error('O formulário com id "search-form" não foi encontrado no documento.');
+} else {
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
+
+    const searchInput = document.getElementById("search-input");
+    const searchTerm = searchInput.value.toLowerCase();
+
+    filterCarsByName(searchTerm);
+  });
+}
+
+function filterCarsByName(searchTerm) {
+  const carComponents = document.querySelectorAll("#car-component");
+
+  carComponents.forEach((carComponent) => {
+    const carNameElement = carComponent.querySelector(".font-bold");
+    const carName = carNameElement.textContent.toLowerCase();
+
+    if (carName.includes(searchTerm) || searchTerm === "") {
+      carComponent.style.display = "block";
+    } else {
+      carComponent.style.display = "none";
+    }
+  });
+}
+
+
+// Chame a função para garantir que todos os carros sejam exibidos inicialmente
+filterCarsByName("");

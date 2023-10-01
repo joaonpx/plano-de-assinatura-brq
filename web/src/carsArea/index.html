@@ -59,7 +59,7 @@
       </svg>
     </header>
     <section class="py-4 bg-blue-600 flex">
-      <div class="flex flex-col bg-red-200 container mx-auto text-center">
+      <div class="flex flex-col bg-red-200 container mx-auto text-start">
         <p class="text-xl font-bold">
           Escolha as categorias de sua preferência
         </p>
@@ -118,9 +118,10 @@
             </div>
           </div>
         </div>
-        <form class="form-inline hidden lg:flex">
+        <form id="search-form" class="form-inline hidden lg:flex">
           <input
-            class="form-control  w-full"
+            id="search-input"
+            class="form-control w-full"
             type="search"
             placeholder="Buscar"
             aria-label="Search"
@@ -136,7 +137,7 @@
               />
             </svg>
           </button>
-        </form>
+        </form>        
       </div>
     </section>
     <section class="py-4 w-full bg-green-400">
@@ -149,7 +150,7 @@
     <section class="py-4 w-full bg-red-800">
       <div class="container w-full ">
         <div class=" w-full">
-          <div id="car-container" class="w-full mx-auto grid grid-cols-3 gap-4 p-2  "></div>
+          <div id="car-container" class="w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 p-2  "></div>
           </div>
         </div>
       </div>
