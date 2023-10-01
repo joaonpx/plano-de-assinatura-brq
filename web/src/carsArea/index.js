@@ -215,16 +215,19 @@ function filterCarsByCategory(category) {
 const searchForm = document.getElementById("search-form");
 
 if (!searchForm) {
-  console.error('O formulário com id "search-form" não foi encontrado no documento.');
+  console.error(
+    'O formulário com id "search-form" não foi encontrado no documento.'
+  );
 } else {
-  searchForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Impede o envio do formulário padrão
+  const searchInput = document.getElementById("search-input");
 
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.toLowerCase();
-
+  searchInput.addEventListener("input", function (event) {
+    const searchTerm = event.target.value.toLowerCase();
     filterCarsByName(searchTerm);
   });
+
+  // Chame a função para garantir que todos os carros sejam exibidos inicialmente
+  filterCarsByName("");
 }
 
 function filterCarsByName(searchTerm) {
@@ -241,7 +244,3 @@ function filterCarsByName(searchTerm) {
     }
   });
 }
-
-
-// Chame a função para garantir que todos os carros sejam exibidos inicialmente
-filterCarsByName("");
