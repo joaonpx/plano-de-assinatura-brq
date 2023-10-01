@@ -24,7 +24,7 @@ function CreateImageLabelComponent(item) {
     "content-center flex justify-center p-0 h-auto w-full";
 
   componentContainer.className =
-    "place-content-end flex flex-col w-full h-full";
+    "place-content-end flex pointer flex-col w-full h-full";
 
   componentContainer.appendChild(imageElement);
   componentContainer.appendChild(labelElement);
@@ -158,7 +158,7 @@ function CreateCarComponent(car) {
 
   componentContainer.id = "car-component";
 
-  componentContainer.className = "p-6 border-2 border-white rounded";
+  componentContainer.className = "p-6 border border-white rounded";
 
   categoryElement.className = " font-medium text-white";
 
