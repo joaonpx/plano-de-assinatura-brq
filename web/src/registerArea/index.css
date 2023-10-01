@@ -18,7 +18,7 @@ main .select-option {
   background-color: #1c1c1e !important;
   color: hsl(0, 0%, 50%);
   cursor: pointer !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   padding: 10px 12px !important;
 }
 
@@ -33,7 +33,7 @@ main .select-option:focus {
 input {
   background-color: #1c1c1e !important;
   color: #ffffff !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 input:focus {
