@@ -1,14 +1,16 @@
 body {
-    background-color: rgba(73, 71, 71, 1);
+    background-color: #1c1c1e;
     color: white;
     font-family: Lato;
 }
 
-.seta-voltar{
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
+.nav-voltar {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.titulo {
+    margin-left: 14%;
 }
 
 #pagina-completa{
@@ -102,11 +104,11 @@ ul li img{
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .botoes-pagamento input {
-    background-color: rgba(73, 71, 71, 1);
+    background-color: #1c1c1e;
     color: white;
     margin-bottom: 12%;
     padding: 13px;
@@ -156,9 +158,11 @@ ul li img{
 .botao-pagamento{
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 .botao-concluir{
+    width: 237px;
     padding: 10px 20px;
     border-style: none;
     border-radius: 5px;
@@ -176,8 +180,8 @@ input:hover{
 }
 
 .botao-concluir:hover, .botao-alterar-plano:hover{
-    background-color: black;
-    color: white;
+    opacity: 0.85;
+    color: black;
 }
 
 /*AREA DE RESPONSIVIDADE*/
@@ -206,9 +210,17 @@ input:hover{
     .nr-cartao, .nm-titular, .parcelas{
         width: 55%;
     }
+
+    .botao-concluir{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
+    .titulo {
+        margin-left: 0;
+    }
+    
     h1{
         text-align: center;
         margin-top: 10px;
