@@ -73,7 +73,7 @@ header {
 }
 
 .text-white {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .bg-none {
@@ -170,6 +170,11 @@ header {
   border-width: 2px;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .select-option {
   background-color: #1c1c1e !important;
   color: hsl(0, 0%, 50%);
@@ -180,4 +185,8 @@ header {
 
 .select-option:focus {
   box-shadow: none !important;
+}
+
+#search-input::placeholder {
+  color: #ffffff; /* Change this to the desired color */
 }
