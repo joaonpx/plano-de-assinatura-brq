@@ -1,0 +1,109 @@
+body {
+  font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e !important;
+}
+
+header,
+main,
+section {
+  padding-inline: 10% !important;
+  margin-top: 30px;
+}
+
+main .topic {
+  font-size: 22px !important;
+}
+
+main .select-option {
+  background-color: #1c1c1e !important;
+  color: hsl(0, 0%, 50%);
+  cursor: pointer !important;
+  font-size: 16px !important;
+  padding: 10px 12px !important;
+}
+
+main .select-option:focus {
+  box-shadow: none !important;
+}
+
+.disabled {
+  display: none !important;
+}
+
+input {
+  background-color: #1c1c1e !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+.form-control {
+  padding: 10px 12px !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  border: 2px solid #ffffff;
+}
+
+input[type="radio"]:checked {
+  border-color: #ffffff !important;
+}
+
+input[type="radio"]:focus {
+  box-shadow: none;
+}
+
+input[type="date"] {
+  color: #ffffff80 !important;
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+button {
+  width: 237px;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 50%;
+  }
+}
+
+.was-validated .form-control,
+.select-option:valid {
+  background-image: none !important;
+}
+
+.was-validated .form-control:invalid {
+  background-image: none !important;
+}
+
+.was-validated .select-option:invalid {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.75rem center/8px 10px !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

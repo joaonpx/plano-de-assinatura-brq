@@ -1,0 +1,43 @@
+body {
+  font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e !important;
+}
+
+header {
+  padding-inline: 10% !important;
+  margin-top: 30px;
+}
+
+.check-circle {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  height: 6em;
+  position: relative;
+}
+
+main {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.fechar {
+  min-height: 31px;
+  max-width: 98%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
