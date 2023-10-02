@@ -1,4 +1,3 @@
-
 const items = [
   { img: "todos.svg", label: "Todos" },
   { img: "economico.svg", label: "Econômico" },
@@ -177,17 +176,24 @@ function CreateCarComponent(car) {
   chooseButton.textContent = "Escolher Veículo";
   chooseButton.className =
     "text-black p-2 flex w-full justify-center bg-white py-8 rounded";
+
+  chooseButton.addEventListener("click", function () {
+    window.location.href = "../additionalArea/index.html";
+  });
+
   componentContainer.appendChild(chooseButton);
 
   return componentContainer;
 }
 
-document.querySelectorAll("#category-dropdown .dropdown-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    const selectedCategory = item.textContent;
-    filterCarsByCategory(selectedCategory);
+document
+  .querySelectorAll("#category-dropdown .dropdown-item")
+  .forEach((item) => {
+    item.addEventListener("click", () => {
+      const selectedCategory = item.textContent;
+      filterCarsByCategory(selectedCategory);
+    });
   });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const carContainer = document.getElementById("car-container");
@@ -209,8 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function filterCarsByCategory(category) {
   const carComponents = document.querySelectorAll("#car-component");
 
-  
-
   carComponents.forEach((carComponent) => {
     const carCategory = carComponent.querySelector(".font-medium").textContent;
 
@@ -225,7 +229,9 @@ function filterCarsByCategory(category) {
 const searchForm = document.getElementById("search-form");
 
 if (!searchForm) {
-  console.error('O formulário com id "search-form" não foi encontrado no documento.');
+  console.error(
+    'O formulário com id "search-form" não foi encontrado no documento.'
+  );
 } else {
   const searchInput = document.getElementById("search-input");
 

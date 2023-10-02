@@ -107,3 +107,17 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+a:visited {
+  color: inherit !important;
+}
+
+a:hover {
+  color: inherit !important;
+}
