@@ -1,9 +1,192 @@
-html, body {
-  font-family: "Lato", sans-serif !important;
+/* Estilos gerais */
+body {
   background-color: #1c1c1e;
 }
 
+/* Estilos para o cabeçalho */
 header {
-  padding-inline: 10% !important;
-  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-white {
+  border-color: #ffffff;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.bg-none {
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-white {
+  border-color: #ffffff;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-none {
+  border: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border {
+  border-width: 2px;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.select-option {
+  background-color: #1c1c1e !important;
+  color: hsl(0, 0%, 50%);
+  cursor: pointer !important;
+  font-size: 18px !important;
+  padding: 10px 12px !important;
+}
+
+.select-option:focus {
+  box-shadow: none !important;
+}
+
+#search-input::placeholder {
+  color: #ffffff; /* Change this to the desired color */
 }
