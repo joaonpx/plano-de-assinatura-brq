@@ -194,3 +194,15 @@ header {
 #search-input::placeholder {
   color: #ffffff; /* Change this to the desired color */
 }
+
+#car-component > img {
+  object-fit: cover !important;
+}
+
+.info p {
+  color: hsl(0, 0%, 50%);
+}
+
+#car-component > button {
+  border: none !important;
+}
