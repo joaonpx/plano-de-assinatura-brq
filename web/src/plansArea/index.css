@@ -1,6 +1,38 @@
+
 body {
   font-family: "Lato", sans-serif !important;
+  background-color: #1c1c1e !important;
 }
+
+form {
+  height: 100% !important;
+}
+
+input[type="checkbox"] {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-check-input {
+  width: 19px !important;
+  height: 19px !important;
+
+  border: #ffff 2px solid !important;
+  background-color: #1c1c1e !important;
+  cursor: pointer !important;
+}
+
+.form-check-input:focus {
+  box-shadow: none !important;
+}
+
 
 header {
   padding-inline: 10% !important;
@@ -13,7 +45,17 @@ main .benefits {
   padding: 0;
 }
 
-main .card-info .hours-input {
+main .card {
+  height: 42rem !important;
+  width: 22rem !important;
+}
+
+main .card:last-child {
+  background-color: #1c1c1e !important;
+}
+
+main .card-info .hours-input,
+main .card-info .months-input {
   width: 3.3rem;
   background: none;
   border: none;
@@ -21,23 +63,25 @@ main .card-info .hours-input {
   color: #6c757d;
 }
 
-main .card-info .hours-input:focus {
+main .card-info .hours-input:focus,
+main .card-info .months-input:focus {
   outline: 0;
 }
 
-main .card-info .hours-input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
+main .card-info .hours-input::placeholder,
+main .card-info .months-input::placeholder {
+  
   color: #6c757d;
-  opacity: 1; /* Firefox */
+  opacity: 1; 
 }
 
-main .card-info .hours-input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+main .card-info .hours-input:-ms-input-placeholder,
+main .card-info .months-input:-ms-input-placeholder {
   color: #6c757d;
 }
 
-main .card-info .hours-input::-ms-input-placeholder {
-  /* Microsoft Edge */
+main .card-info .hours-input::-ms-input-placeholder,
+main .card-info .months-input::-ms-input-placeholder {
   color: #6c757d;
 }
 
@@ -45,9 +89,8 @@ main .benefits .benefit .form-check-input {
   width: 19px !important;
   height: 19px !important;
 
-  border: #212529 2px solid !important;
-  background-color: #212529 !important;
-  cursor: pointer !important;
+  border: #1c1c1e 2px solid !important;
+  background-color: #1c1c1e !important;
 }
 
 main .benefits .benefit .form-check-input:focus {
@@ -56,24 +99,4 @@ main .benefits .benefit .form-check-input:focus {
 
 main .benefits-custom {
   padding: 0 !important;
-}
-
-main .benefits-custom .benefit .form-check-input {
-  width: 19px !important;
-  height: 19px !important;
-
-  border: #ffff 2px solid !important;
-  background-color: #212529 !important;
-  cursor: pointer !important;
-}
-
-main .benefits-custom .benefit .form-check-input:focus {
-  box-shadow: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
